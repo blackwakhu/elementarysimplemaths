@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>sum maker</title>
+        <style>
+            .left{
+                float: left;
+                margin: 8px;
+                position: fixed;
+            }
+            div{
+                margin-left: 165px;
+                margin-right: 10px; 
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            form{
+                margin-bottom: 15px; 
+                margin-left: 15px; 
+                margin-right: 15px;
+                margin-top: 15px;
+            }
+            input{
+                margin-bottom: 10px;
+            }
+        </style>
+        <script>
+            <!--
+                function addIt(){
+                    let value1 = parseInt(document.adder.inputA.value);
+                    let value2 = parseInt(document.adder.inputB.value);
+                    document.adder.output.value = value1 + value2
+                }
+                function calccircle(){
+                    let radii = parseInt(document.math.radius.value);
+                    document.math.areacircle.value = 22/7 * radii**2;
+                    document.math.perimetercircle.value = 22/7 * 2 * radii;
+                }
+                function calcrect(){
+                    let l = parseInt(document.math.length.value);
+                    let w = parseInt(document.math.width.value);
+                    document.math.arearect.value = l * w;
+                    document.math.perimeterrect.value = 2 * (l + w);
+                }
+                function caclsquare(){
+                    let s = parseInt(document.math.side.value);
+                    document.math.areasquare.value = s**2;
+                    document.math.perimetersquare.value = 4 * s;
+                }
+                function calctriangle(){
+                    let a = parseInt(document.math.base.value);
+                    let b = parseInt(document.math.height.value);
+                    let c = parseInt(document.math.hypotenus.value);
+                    document.math.areatria.value = 1/2 * a * b;
+                    document.math.perimetertria.value = a + b + c;
+                }
+                function calcinterest(){
+                    let p = parseInt(document.money.principal.value);
+                    let t = parseInt(document.money.time.value);
+                    let r = parseInt(document.money.interestrate.value);
+                    // document.money.simple_interest.value = p * t * r / 100;
+                    let s_interest = p * t * r / 100;
+                    let s_amount = s_interest + p;
+                    let c_amount = p * ((1 + (r/100))**t);
+                    let c_interest = c_amount - p;
+                    document.money.simple_interest.value = s_interest;
+                    document.money.compound_interest.value = c_interest;
+                    document.money.simple_interest_amount.value = s_amount;
+                    document.money.compound_interest_amount.value = c_amount;
+                }
+                function calckmtom(){
+                    let d = parseFloat(document.converter.kmtom.value) * 1000;
+                    document.converter.mtokm.value = d + " m";
+                }
+                function calcmtokm(){
+                    let d = parseFloat(document.converter.mtokm.value) / 1000;
+                    document.converter.kmtom.value = d + " km"
+                }
+                -->
+        </script>
+    </head>
+    <body style="background-color: pink;">
+        <p class="left">
+            what to learn<br>
+            <a href="#simple_addition">simple addition</a><br>
+            <a href="#perimeter_and_area">perimeter and area</a><br>
+            <a href="#money">money issues</a><br>
+            <a href="#conversions">conversions</a><br>
+            <image src="family.jpg" width="150" height="200" alt="family"></image><br>
+            <image src="family2.jpg" width="150" height="200" alt="family"></image><br>
+        </p>
+        <div style="background-color: blue;" id="simple_addition" style="margin-top: 30px;">
+            <form name="adder" style="background-color: cornflowerblue;">
+                simple addition
+                <input type="text" name="inputA" value="0" size="4" style="margin-left: 20px;">
+                <input type="text" name="inputB" value="0" size="4">
+                <input type="button" value="add" onclick="addIt()" style="margin-top: 25px;">
+                <p>___________________</p>
+                <input type="text" name="output" size="6" style="margin-bottom: 25px; margin-left: 20px"><br>
+            </form>
+            <form name="math" style="background-color: skyblue; border-color: blue; border: solid thin;" id="perimeter_and_area">
+                now lets do some math<br>
+                lets calculate the area and perimeter of the following<br>
+                1.the circle <br>
+                enter the radius
+                <input type="text" name="radius" size="8" style="margin-left: 60px;">
+                <input type="button" value="the area and perimeter" onclick="calccircle()"><br>
+                the area is <input type="text" name="areacircle" value="" size="8" style="margin-left: 106px;"><br>
+                the perimeter is <input type="text" name="perimetercircle" value="" size="8" style="margin-left: 60px;"><br>
+                <hr>
+                2. the rectangle<br>
+                enter the length
+                <input type="text" name="length" size="8" style="margin-left: 60px;"><br>
+                enter the width
+                <input type="text" name="width" size="8" style="margin-left: 65px;">
+                <input type="button" value="the area and perimeter" onclick="calcrect()"><br>
+                    the area is <input type="text" name="arearect" value="" size="8" style="margin-left: 106px;"><br>
+                the perimeter is <input type="text" name="perimeterrect" value="" size="8" style="margin-left: 60px;"><br>
+                <hr>
+                3. the square<br>
+                enter the side
+                <input type="text" name="side" size="8" style="margin-left: 75px;">
+                <input type="button" value="the area and perimeter" onclick="caclsquare()"><br>
+                the area is <input type="text" name="areasquare" value="" size="8" style="margin-left: 102px;"><br>
+                the perimeter is <input type="text" name="perimetersquare" value="" size="8" style="margin-left: 60px;"><br>
+                <hr>
+                4. the triangle<br>
+                enter the base 
+                <input type="text" name="base" size="8" style="margin-left: 72px;"><br>
+                enter the height
+                <input type="text" name="height" size="8" style="margin-left: 58px;"><br>
+                enter the hypotenus
+                <input type="text" name="hypotenus" size="8" style="margin-left: 27px;">
+                <input type="button" value="the area and perimeter" onclick="calctriangle()"><br>
+                the area is <input type="text" name="areatria" size="8" style="margin-left: 102px;"><br>
+                the perimeter is <input type="text" name="perimetertria" size="8" style="margin-left: 60px;">
+            </form>
+        </div>
+        <div style="background-color: green;" id="money">
+            now lets deal with something maybe about money
+            <form name="money" style="background-color: greenyellow;">
+                lets start with simple interest and compund interest<br>
+                enter the principal
+                <input type="text" name="principal" size="10" style="margin-left: 50px;"><br>
+                enter the interest
+                <input type="text" name="interestrate" size="8" style="margin-left: 59px;"><br>
+                enter the period
+                <input type="text" name="time" size="8" style="margin-left: 70px;">
+                <input type="button" value="simple interest and compound interest" onclick="calcinterest()"><br>
+                the simple interest is <input type="text" name="simple_interest" size="10" style="margin-left: 31px;"> and the amount is 
+                <input type="text" name="simple_interest_amount" size="10"><br>
+                the compound interest is <input type="text" name="compound_interest" size="10"> and the amount is 
+                <input type="text" name="compound_interest_amount" size="10">
+            </form>
+        </div>
+        <div  style="background-color: red;" id="conversions">
+            lets look at conversions
+            <form  style="background-color: purple;" name="converter">
+                1. kilometre to metre<br>
+                km <input type="text" name="kmtom" size="8" style="margin-left: 40px;" onchange="calckmtom()"> m <input type="text" name="mtokm" size="8" style="margin-left: 40px;" onchange="calcmtokm()">
+                <br>
+                <input type="button" value="km to m" onclick="calckmtom()" style="margin-left: 70px;"><input type="button" value="m to km" onclick="calcmtokm()" style="margin-left: 120px;">
+            </form>
+        </div>
+    </body>
+</html>
